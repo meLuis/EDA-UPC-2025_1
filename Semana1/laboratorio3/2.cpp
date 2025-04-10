@@ -64,7 +64,7 @@ public:
     }
 
     void mostrar() const {
-        for (size_t i = 0; i < curvas.size(); ++i) {
+        for (size_t i = 0; i < curvas.size(); i++) {
             cout << "Curva " << i + 1 << ": ";
             curvas[i].mostrar();
         }
@@ -79,13 +79,13 @@ int main() {
 
     Canvas<float> canvas;
 
-    for (int c = 0; c < cantidadCurvas; ++c) {
+    for (int c = 0; c < cantidadCurvas; c++) {
         CurvaBezier<float> curva;
         int cantidadPuntos;
         cout << "\nCurva " << c + 1 << " - Ingrese la cantidad de puntos de control: ";
         cin >> cantidadPuntos;
 
-        for (int i = 0; i < cantidadPuntos; ++i) {
+        for (int i = 0; i < cantidadPuntos; i++) {
             float x, y;
             cout << "Ingrese coordenadas del punto " << i + 1 << " (x y): ";
             cin >> x >> y;
