@@ -4,7 +4,7 @@ using namespace std;
 template <typename T>
 T encontrarMayor(T arr[], int size) {
     T mayor = arr[0];
-    for (int i = 1; i < size; ++i)
+    for (int i = 1; i < size; i++)
         if (arr[i] > mayor)
             mayor = arr[i];
     return mayor;
@@ -13,7 +13,7 @@ T encontrarMayor(T arr[], int size) {
 template <typename T>
 T encontrarMenor(T arr[], int size) {
     T menor = arr[0];
-    for (int i = 1; i < size; ++i)
+    for (int i = 1; i < size; i++)
         if (arr[i] < menor)
             menor = arr[i];
     return menor;
@@ -22,7 +22,7 @@ T encontrarMenor(T arr[], int size) {
 template <typename T>
 T sumarElementos(T arr[], int size) {
     T suma = 0;
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < size; i++)
         suma += arr[i];
     return suma;
 }
@@ -31,9 +31,9 @@ template <typename T>
 T encontrarModa(T arr[], int size) {
     int maxCount = 0;
     T moda = arr[0];
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; i++) {
         int count = 0;
-        for (int j = 0; j < size; ++j) {
+        for (int j = 0; j < size; j++) {
             if (arr[j] == arr[i])
                 ++count;
         }
@@ -47,8 +47,8 @@ T encontrarModa(T arr[], int size) {
 
 template <typename T>
 void ordenarArreglo(T arr[], int size) {
-    for (int i = 0; i < size - 1; ++i) {
-        for (int j = 0; j < size - i - 1; ++j) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
                 T temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -61,7 +61,7 @@ void ordenarArreglo(T arr[], int size) {
 template <typename T>
 void eliminarEnPosicion(T arr[], int& size, int pos) {
     if (pos < 0 || pos >= size) return;
-    for (int i = pos; i < size - 1; ++i) {
+    for (int i = pos; i < size - 1; i++) {
         arr[i] = arr[i + 1];
     }
     --size;
@@ -69,7 +69,7 @@ void eliminarEnPosicion(T arr[], int& size, int pos) {
 
 template <typename T>
 int buscarElemento(T arr[], int size, T valor) {
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < size; i++)
         if (arr[i] == valor)
             return i;
     return -1;
@@ -77,7 +77,7 @@ int buscarElemento(T arr[], int size, T valor) {
 
 template <typename T>
 bool existeElemento(T arr[], int size, T valor) {
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < size; i++)
         if (arr[i] == valor)
             return true;
     return false;
@@ -86,7 +86,7 @@ bool existeElemento(T arr[], int size, T valor) {
 template <typename T>
 int contarRepeticiones(T arr[], int size, T valor) {
     int conteo = 0;
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < size; i++)
         if (arr[i] == valor)
             ++conteo;
     return conteo;
@@ -95,7 +95,7 @@ int contarRepeticiones(T arr[], int size, T valor) {
 template <typename T>
 void mostrarArreglo(T arr[], int size) {
     cout << "[ ";
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < size; i++)
         cout << arr[i] << " ";
     cout << "]" << endl;
 }
@@ -108,7 +108,7 @@ int main() {
     cin >> size;
 
     cout << "Ingrese los elementos del arreglo:\n";
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; i++) {
         cout << "Elemento " << i << ": ";
         cin >> arreglo[i];
     }
